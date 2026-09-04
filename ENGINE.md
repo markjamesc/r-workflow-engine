@@ -210,7 +210,7 @@ The engine's default output should resemble the owner's established style: direc
 Must:
 
 - attach `tidyverse`, `janitor`, `lubridate`, `readr` / `readxl`, `openxlsx`, `ggplot2`, `purrr`, and `zoo`; attach `tidymodels` / `parsnip` only when Expand is on
-- define `%not_in%` as ``%not_in%` <- negate(`%in%`)`
+- define the operator as: `` `%not_in%` <- negate(`%in%`) ``
 - use `%>%` as the default pipe
 - use unqualified tidyverse and openxlsx calls after libraries are attached; qualify only collisions or unusual dependencies
 - use descriptive intermediate objects and straightforward assignments between major transformations
