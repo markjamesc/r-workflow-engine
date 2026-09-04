@@ -1,6 +1,6 @@
 # R Workflow Engine
 
-One-file paste prompt for producing a complete tidyverse R analysis script. It is not an installable R package, Airflow replacement, or job scheduler.
+One-file paste prompt for producing a complete tidyverse R analysis script in an owner-familiar coding style. It is not an installable R package, Airflow replacement, or job scheduler.
 
 Paste [`ENGINE.md`](ENGINE.md) into an AI together with a short owner brief. The model produces one R script with a thin configuration layer, named stage functions, a quality gate, and non-transforming publication outputs.
 
@@ -44,11 +44,15 @@ That implementation demonstrates the engine's named configuration, stage functio
 
 ## Design dialect
 
-- Tidyverse pipelines
+- Familiar `%>%`-based tidyverse pipelines
+- Ordinary verbs used directly after libraries are attached
+- Practical intermediate objects and linear stage bodies
 - Named lists and explicit column roles
-- `purrr::map()` over group names rather than column positions
+- `map()` over group names rather than column positions
+- `imap()` for visible, direct `openxlsx` workbook construction
 - One reusable metric function
 - A single quality gate before publication
+- Necessary unfamiliar techniques isolated and briefly explained
 - Publication from validated objects without hidden recomputation
 
 This is my preferred analytical dialect, not a copy of a former employer's internal framework.
